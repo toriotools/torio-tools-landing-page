@@ -154,9 +154,26 @@
         }
 
         /* Ensure all content stays within viewport */
-        * {
+        img,
+        video,
+        iframe {
             max-width: 100%;
+            height: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
+        }
+
+        /* Ensure nav buttons are always visible */
+        .nav-btn {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            min-height: 40px;
         }
     </style>
 </head>
@@ -180,13 +197,13 @@
                     </div>
                     <div class="flex gap-2 sm:gap-4">
                         <a href="https://discord.gg/M6d7xaZ9Vy" target="_blank"
-                            class="glass-card px-3 py-2 sm:px-4 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
-                            <i class="fa-brands fa-discord text-[#5865F2] text-lg"></i>
+                            class="nav-btn glass-card px-3 py-2 sm:px-4 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-discord text-[#5865F2] text-xl"></i>
                             <span class="hidden sm:inline">Discord</span>
                         </a>
                         <a href="https://www.youtube.com/@toriotools" target="_blank"
-                            class="glass-card px-3 py-2 sm:px-4 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
-                            <i class="fa-brands fa-youtube text-red-500 text-lg"></i>
+                            class="nav-btn glass-card px-3 py-2 sm:px-4 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
                             <span class="hidden sm:inline">YouTube</span>
                         </a>
                     </div>
