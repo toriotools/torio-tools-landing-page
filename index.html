@@ -127,22 +127,22 @@
     <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
         <div class="glass-card border-none rounded-none border-b border-white/5 bg-black/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20">
+                <div class="flex items-center justify-between h-16 md:h-20">
                     <div class="flex-shrink-0">
                         <a href="#" class="font-display font-bold text-2xl tracking-tighter text-white">
                             Torio<span class="text-brand-orange">.Tools</span>
                         </a>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex gap-2 sm:gap-4">
                         <a href="https://discord.gg/M6d7xaZ9Vy" target="_blank"
-                            class="glass-card px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
+                            class="glass-card px-3 py-2 sm:px-4 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
                             <i class="fa-brands fa-discord text-[#5865F2] text-lg"></i>
-                            Comunidade Discord
+                            <span class="hidden sm:inline">Discord</span>
                         </a>
                         <a href="https://www.youtube.com/@toriotools" target="_blank"
-                            class="glass-card px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
+                            class="glass-card px-3 py-2 sm:px-4 rounded-full text-sm font-medium hover:bg-white/10 transition-all flex items-center gap-2">
                             <i class="fa-brands fa-youtube text-red-500 text-lg"></i>
-                            Canal Oficial
+                            <span class="hidden sm:inline">YouTube</span>
                         </a>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <header class="relative pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
 
             <div class="inline-block mb-4 px-4 py-1 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-xs font-semibold uppercase tracking-wider animate-fade-up"
@@ -159,7 +159,7 @@
                 Automação para Criadores
             </div>
 
-            <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight leading-tight animate-fade-up"
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight leading-tight animate-fade-up"
                 style="animation-delay: 0.2s;">
                 Crie Conteúdo <br>
                 <span class="bg-gradient-to-r from-brand-orange to-red-500 bg-clip-text text-transparent">Sem
@@ -223,16 +223,6 @@
         // Data Source
         const products = [
             {
-                "id": 1,
-                "name": "Torio Tools TTS",
-                "description": "🎙️ Transforme TEXTOS em ÁUDIO com vozes neurais de alta qualidade! +500 vozes em 50+ idiomas. Perfeito para YouTubers e canais Dark.",
-                "price": "47,00",
-                "isFree": false,
-                "youtubeLink": "https://youtu.be/2FjaN0ofsUM",
-                "buyLink": "https://pay.kiwify.com.br/tKClZ43",
-                "tag": "Best Seller"
-            },
-            {
                 "id": 2,
                 "name": "VIDEO-ZIZ Pro",
                 "description": "Transforme sua produção de conteúdo! Render Farm desktop, legendas automáticas (Whisper), overlays e edição em lote. A automação definitiva.",
@@ -243,14 +233,24 @@
                 "tag": "Automation"
             },
             {
-                "id": 3,
-                "name": "Whisk Auto Loop",
-                "description": "Geração de imagens não precisa ser uma dor de cabeça. Automatize e ganhe tempo. Plugin essencial para criadores.",
-                "price": "9,99",
+                "id": 6,
+                "name": "Grok Master",
+                "description": "🚀 GERE VÍDEOS E IMAGENS ILIMITADAS COM IA. De 1 vídeo por hora para 50+ vídeos em minutos. O plugin que automatiza seu Canal Dark.",
+                "price": "69,90",
                 "isFree": false,
-                "youtubeLink": "",
-                "buyLink": "https://pay.kiwify.com.br/m3NoniG",
+                "youtubeLink": "https://youtu.be/aGsfCPhZdPI",
+                "buyLink": "https://pay.kiwify.com.br/ttMK1Vd",
                 "tag": "Plugin"
+            },
+            {
+                "id": 1,
+                "name": "Torio Tools TTS",
+                "description": "🎙️ Transforme TEXTOS em ÁUDIO com vozes neurais de alta qualidade! +500 vozes em 50+ idiomas. Perfeito para YouTubers e canais Dark.",
+                "price": "47,00",
+                "isFree": false,
+                "youtubeLink": "https://youtu.be/2FjaN0ofsUM",
+                "buyLink": "https://pay.kiwify.com.br/tKClZ43",
+                "tag": "Best Seller"
             },
             {
                 "id": 4,
@@ -263,6 +263,16 @@
                 "tag": "Utility"
             },
             {
+                "id": 3,
+                "name": "Whisk Auto Loop",
+                "description": "Geração de imagens não precisa ser uma dor de cabeça. Automatize e ganhe tempo. Plugin essencial para criadores.",
+                "price": "9,99",
+                "isFree": false,
+                "youtubeLink": "",
+                "buyLink": "https://pay.kiwify.com.br/m3NoniG",
+                "tag": "Plugin"
+            },
+            {
                 "id": 5,
                 "name": "Torio Scribe",
                 "description": "Legendas SRT automáticas em segundos. Pare de quebrar a cabeça, comece a renderizar. Simples, rápido e gratuito.",
@@ -271,16 +281,6 @@
                 "youtubeLink": "https://youtu.be/idAveywrbDU",
                 "buyLink": "https://bit.ly/4q2O7J9",
                 "tag": "Free Tool"
-            },
-            {
-                "id": 6,
-                "name": "Grok Master",
-                "description": "🚀 GERE VÍDEOS E IMAGENS ILIMITADAS COM IA. De 1 vídeo por hora para 50+ vídeos em minutos. O plugin que automatiza seu Canal Dark.",
-                "price": "69,90",
-                "isFree": false,
-                "youtubeLink": "https://youtu.be/aGsfCPhZdPI",
-                "buyLink": "https://pay.kiwify.com.br/ttMK1Vd",
-                "tag": "Plugin"
             }
         ];
 
